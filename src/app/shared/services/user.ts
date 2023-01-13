@@ -5,9 +5,9 @@ export interface User {
     photoURL: string;
     genre:string;
     emailVerified: boolean;
-    // todoCategorie:TodoCategorie[];
-    // userEvents:UserEvent[];
-    // userNote:UserNote[];
+    todoCategorie:TodoCategorie[];
+    userEvents:UserEvent[];
+    userNote:UserNote[];
  }
 
  export interface TodoCategorie{
