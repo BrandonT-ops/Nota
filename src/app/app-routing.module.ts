@@ -8,6 +8,7 @@ import { StatisticsBoardComponent } from './Pages/statistics-board/statistics-bo
 import { NotesBoardComponent } from './Pages/notes-board/notes-board.component';
 import { NewNoteBoardComponent } from './Pages/new-note-board/new-note-board.component';
 import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.component';
+import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'to-dos', component:ToDoBoardComponent},
   {path:'stats', component:StatisticsBoardComponent},
   {path:'new-note', component:NewNoteBoardComponent},
-  {path:'new-event', component:NewEventBoardComponent}
+  {path:'new-event', component:NewEventBoardComponent},
+  {path:'new-to-do', component:NewToDoBoardComponent}
   // ,{path:'log-out', component:}
 ];
 
