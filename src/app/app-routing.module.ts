@@ -9,10 +9,12 @@ import { NotesBoardComponent } from './Pages/notes-board/notes-board.component';
 import { NewNoteBoardComponent } from './Pages/new-note-board/new-note-board.component';
 import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.component';
 import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent },
+  {path:'sign-up', component: SignUpComponent},
+  { path: 'sign-in', component: SignInComponent},
   // {path:'', component:},
   {path:'notes', component:NotesBoardComponent},
   {path:'events', component:EventsBoardComponent},

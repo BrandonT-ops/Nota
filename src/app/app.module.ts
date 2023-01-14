@@ -26,6 +26,7 @@ import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.
 import {EventComponent }from './components/event/event.component';
 import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
 import { ToDoComponent } from './components/to-do/to-do.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ToDoComponent } from './components/to-do/to-do.component';
     EventComponent,
     NewToDoBoardComponent,
     ToDoComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
