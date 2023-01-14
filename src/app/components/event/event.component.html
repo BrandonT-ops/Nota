@@ -1,6 +1,6 @@
 <div class="container">
-    <small>{{event.date }}</small><br>
-    <small>{{event.reminder}}</small><br>
+    <small>{{event.date | date: "dd/MMMM/YYYY, hh:mm"}}</small><br>
+    <small>{{event.repeat}}</small><br>
     <h2>{{event.title}}</h2><br>
     <p>{{event.description}}</p>
 </div>

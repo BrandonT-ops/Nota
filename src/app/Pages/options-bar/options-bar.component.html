@@ -5,7 +5,7 @@
             <p>Good Evening</p>
         </div>
         <div class="nav">
-            <a routerLink="notes" routerLinkActive="active-link" class="nav-link"> <img src="" alt=""> Notes</a>
+            <a routerLink="note" routerLinkActive="active-link" class="nav-link"> <img src="" alt=""> Notes</a>
             <a routerLink="events" routerLinkActive="active-link" class="nav-link"> <img src="" alt=""> Events</a>
             <a routerLink="to-dos" routerLinkActive="active-link" class="nav-link"> <img src="" alt=""> To Do List</a>
             <a routerLink="stats" routerLinkActive="active-link" class="nav-link"> <img src="" alt=""> Statistics</a>
@@ -17,7 +17,7 @@
             <p><span class="whatever"></span> &nbsp; Whatever</p>
         </div>
         <div class="log-out">
-            <a href=""><img src="" alt=""> Log Out</a>
+            <button (click)="onLogout()"><img src="" alt=""> Log Out</button>
         </div>
     </div>
     <div class="notes-view"></div>

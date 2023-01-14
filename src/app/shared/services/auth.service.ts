@@ -23,7 +23,18 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
+        const userData: User = {
+          uid: user.uid,
+          email: user.email!,
+          displayName: user.displayName!,
+          photoURL: user.photoURL!,
+          emailVerified: user.emailVerified,
+          genre: "",
+          todoCategorie: [],
+          userEvents: [],
+          userNote: [],
+        };
+        localStorage.setItem('user', JSON.stringify(userData));
         JSON.parse(localStorage.getItem('user')!);
       } else {
         localStorage.setItem('user', 'null');
@@ -36,10 +47,10 @@ export class AuthService {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.SetUserData(result.user);
+        this.getUser(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['home']);
+            this.router.navigate(['note']);
           }
         });
       })
@@ -88,7 +99,7 @@ export class AuthService {
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['home']);
+      this.router.navigate(['note']);
     });
   }
   // Auth logic to run auth providers
@@ -96,8 +107,8 @@ export class AuthService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['home']);
-        this.SetUserData(result.user);
+        this.router.navigate(['note']);
+        this.getUser(result.user);
       })
       .catch((error) => {
         window.alert(error);
@@ -116,10 +127,10 @@ export class AuthService {
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
-      genre:"",
-      todoCategorie:[],
-      userEvents:[],
-      userNote:[],
+      genre: "",
+      todoCategorie: [],
+      userEvents: [],
+      userNote: [],
     };
     return userRef.set(userData, {
       merge: true,
@@ -133,12 +144,22 @@ export class AuthService {
     });
   }
 
-  update(user:User){
+  update(user: User) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `users/${user.uid}`
     );
+    localStorage.setItem('user', JSON.stringify(user));
     return userRef.set(user, {
       merge: true,
+    });
+  }
+  getUser(user: any){
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
+      `users/${user.uid}`
+    );
+    userRef.get().subscribe(val => {
+      user = val.data();
+      localStorage.setItem('user', JSON.stringify(user));
     });
   }
 }

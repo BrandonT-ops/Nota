@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Create a note</h1>
-    <form action="">
+    <form [formGroup]="noteForm">
         <label for="">Title <br>
-            <input type="text">
+            <input type="text" formControlName="title">
         </label><br><br>
         <label for=""> Notes <br>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" formControlName="notes"></textarea>
         </label><br><br>
-        <button type="submit" routerLink="../notes">Create</button>
+        <button type="submit" routerLink="/note" (click)="onSubmit()" [disabled]="!noteForm.valid">Create</button>
     </form>
 </div>

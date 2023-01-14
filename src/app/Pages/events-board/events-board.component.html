@@ -6,10 +6,11 @@
             <button class="views-button">Oldest</button>
         </div>
         <div class="edits">
-            <a href="" routerLink="../new-event" routerLinkActive="active-link" class="edits-button"><img src="" alt=""> &nbsp; Add event</a>
+            <a href="" routerLink="../new-event" routerLinkActive="active-link" class="edits-button"><img src="" alt="">
+                &nbsp; Add event</a>
             <button class="edits-button"><img src="" alt=""> &nbsp; Delete event</button>
         </div>
     </div>
     <h1>Events</h1>
-    <app-event></app-event>
+    <app-event *ngFor="let event of events" [event]="event"></app-event>
 </div>

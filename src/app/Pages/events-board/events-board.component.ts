@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserEvent } from 'src/app/shared/services/user';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-events-board',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class EventsBoardComponent {
 
+  events!: UserEvent[];
+
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+    this.events = this.userService.getUser().userEvents;
+    console.log(this.events);
+  }
 }

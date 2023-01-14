@@ -1,41 +1,41 @@
 <div class="container">
     <h1>Create an event</h1>
-    <form action="">
+    <form [formGroup]="eventForm">
         <label for="">Title <br>
-            <input type="text">
+            <input type="text" formControlName="title">
         </label><br><br>
         <label for=""> Description <br>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
         </label><br><br>
         <div class="date">
             <label for="">Date <br>
-                <input type="date">
-            </label> 
+                <input type="date" formControlName="date">
+            </label>
             <label for="">Time <br>
-                <input type="time">
+                <input type="time" formControlName="time">
             </label>
         </div>
         <p>Repeat</p>
         <div class="repeat-options">
-            <label for="just-once" ng-click="selected()">Just once 
+            <label for="just-once" ng-click="selected()" (click)="onRepeat('Once')">Just once
                 <input type="radio" name="just-once" id="just-once">
             </label>
-            <label for="daily">Daily
-                <input type="radio" name="daily" id="daily">
+            <label for="daily" (click)="onRepeat('Daily')">Daily
+                <input type=" radio" name="daily" id="daily">
             </label>
-            <label for="weekly">Weekly 
-                <input type="radio" name="weekly" id="weekly">
+            <label for="weekly" (click)="onRepeat('Weekly')">Weekly
+                <input type=" radio" name="weekly" id="weekly">
             </label>
-            <label for="bi-weekly">Bi-weekly
-                <input type="radio" name="bi-weekly" id="bi-weekly">
+            <label for="bi-weekly" (click)="onRepeat('Bi-weekly')">Bi-weekly
+                <input type=" radio" name="bi-weekly" id="bi-weekly">
             </label>
-            <label for="monthly">Monthly
-                <input type="radio" name="monthly" id="monthly">
+            <label for="monthly" (click)="onRepeat('Monthly')">Monthly
+                <input type=" radio" name="monthly" id="monthly">
             </label>
-            <label for="yearly">Yearly 
-                <input type="radio" name="yearly" id="yearly">
+            <label for="yearly" (click)="onRepeat('Yearly')">Yearly
+                <input type=" radio" name="yearly" id="yearly">
             </label>
         </div>
-        <button type="submit" routerLink="../notes">Create</button>
+        <button type="submit" (click)="onSubmit()" [disabled]="!eventForm.valid || !repeat">Create</button>
     </form>
 </div>

@@ -1,5 +1,5 @@
-import { UserEvent } from './../../shared/services/user';
 import { Component, Input, OnInit } from '@angular/core';
+import { UserEvent } from './../../shared/services/user';
 
 @Component({
   selector: 'app-event',
@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
   @Input() event!: UserEvent;
 

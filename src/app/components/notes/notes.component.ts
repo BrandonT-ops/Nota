@@ -1,4 +1,4 @@
-import { UserEvent } from './../../shared/services/user';
+import { UserEvent, UserNote } from './../../shared/services/user';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +10,6 @@ export class NotesComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  @Input() note!: UserEvent;
+  @Input() note!: UserNote;
 
 }
