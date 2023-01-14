@@ -6,20 +6,21 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AuthGuard } from './guards/auth.guard';
 import { EventsBoardComponent } from './Pages/events-board/events-board.component';
 import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.component';
-import { NewNoteBoardComponent } from './Pages/new-note-board/new-note-board.component';
-import { NotesBoardComponent } from './Pages/notes-board/notes-board.component';
-import { StatisticsBoardComponent } from './Pages/statistics-board/statistics-board.component';
+import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/note', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent },
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  {path:'sign-up', component: SignUpComponent},
+  { path: 'sign-in', component: SignInComponent},
   // {path:'', component:},
-  { path: 'note', component: NotesBoardComponent, canActivate: [AuthGuard] },
-  { path: 'events', component: EventsBoardComponent, canActivate: [AuthGuard] },
-  { path: 'to-dos', component: ToDoBoardComponent, canActivate: [AuthGuard] },
-  { path: 'stats', component: StatisticsBoardComponent, canActivate: [AuthGuard] },
-  { path: 'new-note', component: NewNoteBoardComponent, canActivate: [AuthGuard] },
-  { path: 'new-event', component: NewEventBoardComponent, canActivate: [AuthGuard] }
+  {path:'note', component:NotesBoardComponent},
+  {path:'events', component:EventsBoardComponent},
+  {path:'to-dos', component:ToDoBoardComponent},
+  {path:'stats', component:StatisticsBoardComponent},
+  {path:'new-note', component:NewNoteBoardComponent},
+  {path:'new-event', component:NewEventBoardComponent},
+  {path:'new-to-do', component:NewToDoBoardComponent}
   // ,{path:'log-out', component:}
 ];
 

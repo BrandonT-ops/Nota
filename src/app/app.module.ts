@@ -27,6 +27,13 @@ import { StatisticsBoardComponent } from './Pages/statistics-board/statistics-bo
 import { ToDoBoardComponent } from './Pages/to-do-board/to-do-board.component';
 import { AuthService } from './shared/services/auth.service';
 initializeApp(environment.firebase);
+import { NotesComponent } from './components/notes/notes.component';
+import { NewNoteBoardComponent } from './Pages/new-note-board/new-note-board.component';
+import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.component';
+import {EventComponent }from './components/event/event.component';
+import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
+import { ToDoComponent } from './components/to-do/to-do.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +51,7 @@ initializeApp(environment.firebase);
     EventComponent,
     NewToDoBoardComponent,
     ToDoComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
