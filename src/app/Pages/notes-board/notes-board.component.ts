@@ -11,7 +11,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 
 export class NotesBoardComponent {
 
-  notes!: UserNote[];
+  notes: UserNote[] = [];
 
   constructor(private userService: UserService) { }
 

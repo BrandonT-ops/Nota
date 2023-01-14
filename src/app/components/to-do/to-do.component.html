@@ -1,4 +1,5 @@
 <div class="container">
-    <span>{{to_do.state}}</span>
-     <p>{{to_do.tasK }}</p>
+    <h2>{{to_do.tasK }}</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>{{ to_do.category }}</p> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+    <span>{{(!to_do.state) ? "Not yet done" : "Done"}}</span>
 </div>

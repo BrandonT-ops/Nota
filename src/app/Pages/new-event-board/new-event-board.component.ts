@@ -52,14 +52,30 @@ export class NewEventBoardComponent implements OnInit {
           this.userService.addInUser('event', this.event);
           break;
       }
-      this.router.navigateByUrl('/events');
+      //   getMessaging().send(
+      //     {
+      //       data: {
+      //         score: '850',
+      //         time: '2:45'
+      //       },
+      //       token: getToken();
+      //     }
+      //   )
+      //     .then((response) => {
+      //       // Response is a message ID string.
+      //       console.log('Successfully sent message:', response);
+      //     })
+      //     .catch((error) => {
+      //       console.log('Error sending message:', error);
+      //     });
+        this.router.navigateByUrl('/events');
+      }
     }
+
+    onRepeat(frequency: string) {
+      this.repeat = frequency;
+      console.log(frequency);
+    }
+
+
   }
-
-  onRepeat(frequency: string) {
-    this.repeat = frequency;
-    console.log(frequency);
-  }
-
-
-}

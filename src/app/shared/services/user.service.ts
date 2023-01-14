@@ -31,7 +31,12 @@ export class UserService {
 
   addToDoInUser(categorie: string, value: Todo) {
     let user = this.getUser();
-    user.todoCategorie.filter(x => x.title == categorie)[0].todos.push(value);
+    let table = user.todoCategorie.filter(x => x.title == categorie);
+    if (table.length != 0) {
+      table[0].todos.push(value)
+    } else {
+      user.todoCategorie.push({ title: categorie, todos: [value] });
+    }
     this.userService.update(user);
   }
 

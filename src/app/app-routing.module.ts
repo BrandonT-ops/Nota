@@ -8,6 +8,9 @@ import { EventsBoardComponent } from './Pages/events-board/events-board.componen
 import { NewEventBoardComponent } from './Pages/new-event-board/new-event-board.component';
 import { NewToDoBoardComponent } from './Pages/new-to-do-board/new-to-do-board.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { NotesBoardComponent } from './Pages/notes-board/notes-board.component';
+import { StatisticsBoardComponent } from './Pages/statistics-board/statistics-board.component';
+import { NewNoteBoardComponent } from './Pages/new-note-board/new-note-board.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },

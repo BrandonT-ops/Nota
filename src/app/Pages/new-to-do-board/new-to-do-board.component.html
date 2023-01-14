@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Create a task</h1>
-    <form action="">
+    <form [formGroup]="todoForm">
         <label for="">Category <br>
-            <input type="text">
+            <input type="text" formControlName="category">
         </label><br><br>
         <label for=""> Task <br>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" formControlName="task"></textarea>
         </label><br><br>
-        <button type="submit" routerLink="../to-dos">Create</button>
+        <button type="submit" (click)="onSubmit()" [disabled]="!todoForm.valid">Create</button>
     </form>
 </div>

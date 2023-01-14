@@ -9,7 +9,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class EventsBoardComponent {
 
-  events!: UserEvent[];
+  events: UserEvent[] = [];
 
   constructor(private userService: UserService) { }
 

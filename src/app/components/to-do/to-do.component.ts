@@ -1,4 +1,3 @@
-import { Todo } from './../../shared/services/user';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./to-do.component.css']
 })
 export class ToDoComponent {
-  @Input() to_do!: Todo;
+  @Input() to_do!: { category: string, tasK: string, state: boolean };
 
 }
