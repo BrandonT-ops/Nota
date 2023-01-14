@@ -1,0 +1,85 @@
+.notes-options{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:20% ;
+    position: absolute;
+}
+.greetings{
+    background-color: var(--primary-color);
+    /* padding: 30px 20px; */
+    flex-basis: 10%;
+    margin-bottom: 5px;
+    display: flex;
+}
+.greetings img{
+    flex-basis: 40%;
+    height: 30px;
+    color: #fff;
+}
+.greetings p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    flex-basis: 60%;
+}
+.nav{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0px 20%; */
+}
+.nav .nav-link{
+    text-decoration: none;
+    padding: 10px 20%;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-size: 13px;
+}
+.active-link{
+    border-left: 3px solid var(--primary-color);
+    border-radius: 3px;
+}
+hr{
+    width: 70%;
+    margin: 30px auto;
+    background-color: var(--primary-color);
+    height: 1px;
+    outline: none;
+    border: none;
+}
+.categories{
+    margin: 25px 20%;
+    font-size: 13px;
+    flex-basis: 40%;
+}
+.categories p {
+    margin-bottom: 25px;
+}
+.categories p span{
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+.personal{
+    background-color: #FFD53E;
+}
+.projects{
+    background-color: #FF0000;
+}
+.whatever{
+    background-color: #0047FF;
+}
+.log-out{
+    flex-basis: 10%;
+}
+.log-out a{
+    text-decoration: none;
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    color: var(--primary-color);
+    font-size: 13px;
+}

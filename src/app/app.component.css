@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+app-options-bar{
+    flex-basis: 20%;
+}
+.body{
+    flex-basis: 80%;
+    margin-left: 20%;
+}
