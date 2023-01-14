@@ -36,9 +36,37 @@ button{
     padding: 8px 22px;
     border-radius: 20px;
     font-weight: 600;
+    margin-top: 20px;
     
 }
-.date{
+.date, .repeat-options{
     display: flex;
     justify-content: space-between;
+    width: 35vw;
+    flex-wrap: wrap;
+}
+.date label{
+    flex-basis: 50%;
+}
+.date label input{
+    width: 150px;
+}
+.repeat-options label{
+    margin-top: 15px;
+    flex-basis: 25%;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 8px 2px lightgray;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+}
+.repeat-options label input{
+    width: 50px;
+    display: none;
+}
+p{
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
 }
