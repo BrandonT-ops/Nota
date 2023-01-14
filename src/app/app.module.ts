@@ -12,6 +12,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from './environment';
 import { AuthService } from './shared/services/auth.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { initializeApp } from "firebase/app";
+initializeApp(environment.firebase);
 import { NotesBoardComponent } from './Pages/notes-board/notes-board.component';
 import { EventsBoardComponent } from './Pages/events-board/events-board.component';
 import { OptionsBarComponent } from './Pages/options-bar/options-bar.component';
