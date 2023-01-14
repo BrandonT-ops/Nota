@@ -1,0 +1,19 @@
+.notes-container{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 8px 2px lightgray;
+    word-wrap: break-word;
+}
+h2 {
+    font-size: 15px;
+}
+p{
+   font-size: 13px; 
+}
+small{
+    color: lightslategrey;
+}
