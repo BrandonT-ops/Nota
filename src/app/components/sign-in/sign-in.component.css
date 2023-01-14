@@ -13,68 +13,71 @@
       background: #FFFFFF;
   }
   
-  .class3{
-  
-      position: absolute;
-      width: 1308px;
-      height: 60px;
-      left: 80px;
-      top: 72px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      background: #FFFFFF;
-      border-radius: 50px ;
-  }
-  .mot3-4{
-  
-      width: 133px;
-      color: rgba(0,0,0,1);
-      position: absolute;
-      top: 20px;
-      left: 1050px;
-      font-family: Segoe UI;
-      font-weight: Semilight;
-      font-size: 22px;
-      opacity: 1;
-      text-align: right;
-  }
-  .mot3-3{
-      width: 133px;
-      color: #FFB100;
-      position: absolute;
-      top: 20px;
-      left: 850px;
-      font-family: Segoe UI;
-      font-weight: Semilight;
-      font-size: 22px;
-      opacity: 1;
-      text-align: right;
-  }
-      
-  .mot3-2{
-      width: 133px;
-      color: rgba(0,0,0,1);
-      position: absolute;
-      top: 20px;
-      left: 650px;
-      font-family: Segoe UI;
-      font-weight: Semilight;
-      font-size: 22px;
-      opacity: 1;
-      text-align: right;
-      
-  }
-  .mot3-1{
-      width: 133px;
-      color: #FFB100;
-      position: absolute;
-      top: 20px;
-      left: 80px;
-      font-family: Segoe UI;
-      font-weight: Semilight;
-      font-size: 22px;
-      opacity: 1;
-      text-align: left;
-  }
+  a{
+    text-decoration: none;
+}
+.class3{
+
+    position: absolute;
+    width: 1308px;
+    height: 60px;
+    left: 80px;
+    top: 72px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    border-radius: 50px ;
+}
+.mot3-4{
+
+    width: 133px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 20px;
+    left: 1050px;
+    font-family: Segoe UI;
+    font-weight: Semilight;
+    font-size: 22px;
+    opacity: 1;
+    text-align: right;
+}
+.mot3-3{
+    width: 133px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 20px;
+    left: 850px;
+    font-family: Segoe UI;
+    font-weight: Semilight;
+    font-size: 22px;
+    opacity: 1;
+    text-align: right;
+}
+    
+.mot3-2{
+    width: 133px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 20px;
+    left: 650px;
+    font-family: Segoe UI;
+    font-weight: Semilight;
+    font-size: 22px;
+    opacity: 1;
+    text-align: right;
+    
+}
+.mot3-1{
+    width: 133px;
+    color: #FFB100;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    font-family: Segoe UI;
+    font-weight: Semilight;
+    font-size: 22px;
+    opacity: 1;
+    text-align: left;
+}
   .class4{
       height: 30%;
       position: absolute;
@@ -181,4 +184,7 @@
   }
   .other{
     margin-top: 70px;
+  }
+  .active-link{
+    color: var(--primary-color);
   }

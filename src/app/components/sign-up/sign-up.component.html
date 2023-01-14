@@ -1,1 +1,38 @@
-<p>sign-up works!</p>
+<div class="class1">
+    <div class="class2"></div>
+    <div class="class3">
+        <a class="mot3-1" routerLink="" routerLinkActive="active-link">Nota</a>
+        <a class="mot3-2" routerLink="../sign-in" routerLinkActive="active-link">Login</a>
+        <a class="mot3-3" routerLink="../sign-up" routerLinkActive="active-link">Sign Up</a>
+        <a class="mot3-4" href="">Contact Us</a>
+    </div>
+    <div class="class4">
+        <form method="post" enctype="multipart/form-data">
+            <span class="usn">Username</span> <br>
+            <input class="input" type="text" name="username" #userName required><br>
+            <p></p>
+            <span class="usn">Password</span> <br>
+            <input class="input" type="text" name="Password" #userPassword required><br>
+            <p></p>
+            <span class="usn">Re-type Password</span> <br>
+            <input class="input" type="password" name="Re-type"><br>
+            <p></p>
+            <span class="usn">Email</span> <br>
+            <input class="input" type="email" name="email"><br>
+            <p></p>
+            <span class="usn">Gender</span><br> 
+            <input type="radio" name="sexe" value="M"><span class="usn">Masculin</span>  
+            <input type="radio" name="sexe" value="F"><span class="usn">Féminin</span><br>
+            <p></p>
+            <span class="usn">Upload profil</span>
+            <input type="file" name="photo"> <br>
+            <p></p>
+            <input type="submit" value="Get Started" id="valid" routerLink="../notes">
+       </form>
+    </div>
+    <label for="text">Embark on the <br> journey of being <br>
+        <span id="chgco">better</span>...
+    </label>
+    <p id="tex">Sign up, get all your schedules in one place ...</p>
+
+</div>
